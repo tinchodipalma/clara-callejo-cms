@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: tinchodipalma/clara-callejo-cms
 
 media_folder: static/assets
 public_folder: assets
@@ -15,3 +16,13 @@ collections:
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
+
+  - name: pages
+    label: Páginas
+    folder: content/pages
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Título }
+      - { name: description, label: Descripción }
+      - { name: body, label: Contenido, widget: markdown }
