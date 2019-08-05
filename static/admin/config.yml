@@ -1,6 +1,7 @@
 backend:
-  name: github
-  repo: tinchodipalma/clara-callejo-cms
+  name: git-gateway
+  # name: github
+  # repo: tinchodipalma/clara-callejo-cms
 
 media_folder: static/assets
 public_folder: assets
