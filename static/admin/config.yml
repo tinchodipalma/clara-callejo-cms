@@ -11,6 +11,12 @@ collections:
     folder: content/blog
     create: true
     fields:
+      - {
+          name: 'contentType',
+          label: Content Type,
+          widget: hidden,
+          default: blog-post,
+        }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
@@ -22,6 +28,12 @@ collections:
     folder: content/pages
     create: true
     fields:
+      - {
+          name: 'contentType',
+          label: Content Type,
+          widget: hidden,
+          default: page,
+        }
       - { name: path, label: Path }
       - { name: title, label: Título }
       - { name: description, label: Descripción }

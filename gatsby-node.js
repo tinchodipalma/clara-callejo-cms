@@ -4,7 +4,8 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`);
+  const blogPostComponent = path.resolve(`./src/templates/blog-post.js`);
+  const custonPageComponent = path.resolve(`./src/templates/custom-page.js`);
   return graphql(
     `
       {
@@ -19,6 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                contentType
               }
             }
           }
@@ -30,21 +32,22 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors;
     }
 
-    // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges;
+    const edges = result.data.allMarkdownRemark.edges;
 
-    posts.forEach((post, index) => {
-      const previous =
-        index === posts.length - 1 ? null : posts[index + 1].node;
-      const next = index === 0 ? null : posts[index - 1].node;
+    edges.forEach((edge, index) => {
+      let edgePath = edge.node.fields.slug;
+      let component = custonPageComponent;
+
+      if (edge.node.frontmatter.contentType !== 'page') {
+        edgePath = `blog${edgePath}`;
+        component = blogPostComponent;
+      }
 
       createPage({
-        path: `blog${post.node.fields.slug}`,
-        component: blogPost,
+        path: edgePath,
+        component,
         context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
+          slug: edge.node.fields.slug,
         },
       });
     });
