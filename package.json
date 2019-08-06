@@ -8,12 +8,15 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@material-ui/core": "^4.3.1",
+    "@material-ui/icons": "^4.2.1",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.25",
     "gatsby-image": "^2.0.39",
     "gatsby-plugin-feed": "^2.1.1",
     "gatsby-plugin-google-analytics": "^2.0.18",
     "gatsby-plugin-manifest": "^2.0.29",
+    "gatsby-plugin-material-ui": "^2.1.5",
     "gatsby-plugin-netlify-cms": "^4.0.0",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
@@ -37,6 +40,7 @@
     "styled-components": "^4.2.0",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
+    "typeface-roboto": "0.0.75",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },

@@ -1,32 +1,27 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
-import Button from "../components/button"
+import Bio from '../components/bio';
+import Layout from '../layouts/Layout';
+import SEO from '../components/seo';
+import Button from '../components/button';
 
 class Blog extends React.Component {
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+    const { data } = this.props;
+    const siteTitle = data.site.siteMetadata.title;
+    const posts = data.allMarkdownRemark.edges;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         <Bio />
-        <div style={{ margin: "20px 0 40px" }}>
+        <div style={{ margin: '20px 0 40px' }}>
           {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
+            const title = node.frontmatter.title || node.fields.slug;
             return (
               <div key={node.fields.slug}>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
+                <h3 style={{}}>
                   <Link
                     style={{ boxShadow: `none` }}
                     to={`blog${node.fields.slug}`}
@@ -41,18 +36,18 @@ class Blog extends React.Component {
                   }}
                 />
               </div>
-            )
+            );
           })}
         </div>
         <Link to="/">
           <Button marginTop="85px">Go Home</Button>
         </Link>
       </Layout>
-    )
+    );
   }
 }
 
-export default Blog
+export default Blog;
 
 export const pageQuery = graphql`
   query {
@@ -61,7 +56,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { contentType: { eq: "blog-post" } } }
+    ) {
       edges {
         node {
           excerpt
@@ -69,7 +67,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD/MM/YYYY")
             title
             description
           }
@@ -77,4 +75,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

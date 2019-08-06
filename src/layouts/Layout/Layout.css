@@ -1,0 +1,15 @@
+.Layout {
+  background: #ffe1d111;
+  padding-bottom: 50px;
+  min-height: calc(100vh - 50px);
+}
+
+.Layout__Main {
+  width: 90%;
+  margin: 0 5%;
+  background: #fff;
+  border: 2px solid #ffe1d1;
+  border-top: 0;
+  padding: 20px 24px;
+  min-height: calc(100vh - 115px);
+}
