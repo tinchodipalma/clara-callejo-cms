@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 
 import './Layout.css';
 
-const Layout = ({ children }) => (
+const Layout = ({ className, children }) => (
   <div className="Layout">
     <Navbar />
     <main className="Layout__Main">
@@ -19,6 +19,11 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
+  className: 'LayoutGenericLayout',
+};
+
+Layout.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

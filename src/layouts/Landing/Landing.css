@@ -1,0 +1,68 @@
+.LandingLayout {
+  padding-bottom: 50px;
+}
+
+.LandingLayout__Main {
+  margin-top: -64px;
+}
+
+.LandingLayout__Main__Content {
+  height: 100%;
+}
+
+.HomeLayout .Navbar {
+  background: transparent;
+  box-shadow: none;
+}
+
+.HomeLayout .Navbar {
+  box-shadow: none;
+}
+
+.HomeLayout .HomeSection {
+  position: relative;
+  background: #ffe1d1;
+  padding: 30px 42px;
+}
+
+.HomeSection__Main {
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.Home__Slogan {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.HomeLayout .Navbar__SiteTitle {
+  opacity: 0;
+}
+
+.HomeLayout--scroll .Navbar {
+  background: transparent;
+}
+
+.HomeLayout--scroll .Navbar__SiteTitle {
+  opacity: 1;
+}
+
+@media (min-width: 576px) {
+  .HomeLayout .HomeSection {
+    min-height: calc(100vh - 100px);
+    padding: 30pxcalc (5% + 12px);
+  }
+}
+
+@media (min-width: 992px) {
+  .HomeLayout .HomeSection {
+    padding: 30pxcalc (7% + 12px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .HomeLayout .HomeSection {
+    padding: 30px calc(10% + 12px);
+  }
+}

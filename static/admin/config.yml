@@ -35,6 +35,9 @@ collections:
           widget: hidden,
           default: page,
         }
+      - { name: 'enabled', label: Habilitado, widget: boolean, default: true }
+      - { name: 'menu', label: Menú, widget: boolean, default: false }
+      - { name: 'menuTitle', label: Título de Menú }
       - { name: path, label: Path }
       - { name: title, label: Título }
       - { name: description, label: Descripción }

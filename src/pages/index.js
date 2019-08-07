@@ -1,29 +1,48 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import Button from '@material-ui/core/Button';
+import React, { useState, useEffect } from 'react';
 import Typography from '@material-ui/core/Typography';
 
-import Layout from '../layouts/Layout';
+import Landing from '../layouts/Landing';
 import SEO from '../components/seo';
 
-const IndexPage = ({ location }) => {
-  const siteTitle = 'Gatsby Starter Personal Website';
+const LAYOUT_CLASSES = {
+  default: 'HomeLayout',
+  scrolling: 'HomeLayout HomeLayout--scroll',
+};
+
+const IndexPage = () => {
+  const [className, setClassName] = useState(LAYOUT_CLASSES.default);
+
+  const onScroll = (event) => {
+    if (window.scrollY > window.innerHeight / 2) {
+      setClassName(LAYOUT_CLASSES.scrolling);
+    } else {
+      setClassName(LAYOUT_CLASSES.default);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Landing className={className}>
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
-      <div>
-        <Typography variant="h4">Contenido del sitio</Typography>
-        <Typography variant="body">Algún texto acá</Typography>
+      <div className="HomeSection">
+        <div className="HomeSection__Main">
+          <Typography variant="h3" color="secondary" className="Home__Slogan">
+            Clara Callejo
+          </Typography>
+          <Typography variant="h5" className="Home__Slogan">
+            Asesoramiento en Comunicación
+          </Typography>
+        </div>
       </div>
-
-      <Link to="/blog/">
-        <Button variant="contained" color="secondary">
-          Ir al blog
-        </Button>
-      </Link>
-    </Layout>
+    </Landing>
   );
 };
 

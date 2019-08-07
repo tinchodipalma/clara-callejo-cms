@@ -1,5 +1,7 @@
 ---
 contentType: page
+enabled: true
+menu: true
 path: about
 title: Sobre Mi
 description: Página de mi
