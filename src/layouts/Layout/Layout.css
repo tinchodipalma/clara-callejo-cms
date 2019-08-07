@@ -3,9 +3,28 @@
 }
 
 .Layout__Main {
-  margin: 0 5%;
+  margin: 0;
 }
 
 .Layout__Main__Content {
   padding: 20px 24px 0;
+  height: 100%;
+}
+
+@media (min-width: 576px) {
+  .Layout__Main {
+    margin: 0 5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .Layout__Main {
+    margin: 0 7%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Layout__Main {
+    margin: 0 10%;
+  }
 }

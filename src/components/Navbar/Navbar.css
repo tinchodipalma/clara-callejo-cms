@@ -1,8 +1,26 @@
 .Navbar .Navbar__Toolbar {
-  margin: 0 5%;
+  margin: 0 3%;
   padding: 0 12px;
 }
 
 .Navbar__Col:last-child {
   margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .Navbar .Navbar__Toolbar {
+    margin: 0 5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .Navbar .Navbar__Toolbar {
+    margin: 0 7%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Navbar .Navbar__Toolbar {
+    margin: 0 10%;
+  }
 }
