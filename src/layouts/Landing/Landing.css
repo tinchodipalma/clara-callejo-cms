@@ -1,5 +1,9 @@
 .LandingLayout {
-  padding-bottom: 50px;
+  padding-bottom: 0;
+}
+
+.LandingLayout .Footer {
+  margin-top: 0;
 }
 
 .LandingLayout__Main {
@@ -11,29 +15,18 @@
 }
 
 .HomeLayout .Navbar {
+  box-shadow: 0px 2px 4px -1px rgba(230, 200, 180, 0.4),
+    0px 4px 5px 0px rgba(230, 200, 180, 0.34),
+    0px 1px 10px 0px rgba(230, 200, 180, 0.32);
+}
+
+.HomeLayout:not(.HomeLayout--scroll) .Navbar {
   background: transparent;
   box-shadow: none;
 }
 
-.HomeLayout .Navbar {
-  box-shadow: none;
-}
-
-.HomeLayout .HomeSection {
-  position: relative;
-  background: #ffe1d1;
-  padding: 30px 42px;
-}
-
-.HomeSection__Main {
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px 0;
-}
-
-.Home__Slogan {
-  text-transform: uppercase;
-  font-weight: 500;
+.HomeLayout:not(.HomeLayout--scroll) .Navbar .Navbar__Menu__List__Item a {
+  border-color: transparent;
 }
 
 .HomeLayout .Navbar__SiteTitle {
@@ -41,28 +34,132 @@
 }
 
 .HomeLayout--scroll .Navbar {
-  background: transparent;
+  border-bottom: 1px solid #e6c8b8;
 }
 
 .HomeLayout--scroll .Navbar__SiteTitle {
   opacity: 1;
 }
 
+.HomeLayout .HomeSection {
+  position: relative;
+}
+
+.HomeLayout .HomeSectionStartLayer {
+  position: relative;
+  padding: 90px 42px;
+  display: grid;
+  grid: auto / repeat(1, 1fr);
+  grid-gap: 20px;
+  background: url('/assets/backgrounds/whitepencilsbg.jpg') #fafafa no-repeat;
+  background-size: cover;
+}
+
+.HomeSection__Main {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  padding: 120px 0;
+  height: 400px;
+  border: 3px solid #fff;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.HomeSection__Main .Home__Slogan {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.HomeSection__Main .Home__Slogan:last-child {
+  margin-bottom: 0;
+}
+
+.HomeLayout .HomeSection.HomeSectionBannersLayer {
+  padding: 0;
+}
+
+.HomeLayout .HomeSectionBannersLayer .HomeSection__Grid {
+  display: grid;
+  grid: auto / repeat(1, 1fr);
+  grid-gap: 0;
+  border: 3px solid #999;
+  border-left: 0;
+  border-right: 0;
+}
+
+.HomeLayout .HomeSectionBannersLayer .HomeSection__Grid__Item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.HomeLayout .HomeSection__Grid__Item .HomeSection__Grid__Item__Image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.HomeLayout .HomeSection__Grid__Item:hover .HomeSection__Grid__Item__Image {
+  transform: scale(1.05, 1.05);
+}
+
+.HomeLayout .HomeSection__Grid__Item .HomeSection__Grid__Item__Label {
+  position: relative;
+  z-index: 1;
+  padding: 35px 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    background 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.HomeLayout .HomeSection__Grid__Item:hover .HomeSection__Grid__Item__Label {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.05, 1.05);
+}
+
 @media (min-width: 576px) {
   .HomeLayout .HomeSection {
     min-height: calc(100vh - 100px);
-    padding: 30pxcalc (5% + 12px);
+    padding: 90px calc(5% + 12px);
+  }
+
+  .HomeLayout .HomeSectionBannersLayer .HomeSection__Grid {
+    grid: auto / repeat(2, 1fr);
   }
 }
 
 @media (min-width: 992px) {
   .HomeLayout .HomeSection {
-    padding: 30pxcalc (7% + 12px);
+    padding: 90px calc(7% + 12px);
+    grid: auto / repeat(2, 1fr);
+  }
+
+  .HomeLayout .HomeSection .HomeSection__Main {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 200px 0;
+    height: 500px;
   }
 }
 
 @media (min-width: 1200px) {
   .HomeLayout .HomeSection {
-    padding: 30px calc(10% + 12px);
+    padding: 90px calc(10% + 12px);
+  }
+
+  .HomeLayout .HomeSectionBannersLayer .HomeSection__Grid {
+    grid: auto / repeat(4, 1fr);
   }
 }
