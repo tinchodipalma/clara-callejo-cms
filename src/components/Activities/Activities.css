@@ -1,0 +1,98 @@
+.Activities__List {
+  display: grid;
+  grid: auto / 100%;
+}
+
+.Activities__List__Item {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 24px);
+  margin: 20px auto;
+  border-top: 1px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.Activities__List__Item:nth-child(even) {
+  direction: rtl;
+}
+
+.Activities__List__Item__Image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.Activities__List__Item,
+.Activities__List__Item .Activities__List__Item__Image {
+  transition: border-color 0.3s ease-in-out;
+}
+
+.Activities__List__Item:hover,
+.Activities__List__Item:hover .Activities__List__Item__Image {
+  border-color: #ff9d8d;
+}
+
+.Activities__List__Item__Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Activities__List__Item__Data {
+  padding: 5px;
+  direction: ltr;
+}
+
+.Activities__List__Item:nth-child(even) .Activities__List__Item__Data {
+  text-align: right;
+}
+
+.Activities__List__Item__Data__Label {
+  text-transform: uppercase;
+}
+
+.Activities__List__Item__Data__Description {
+  width: 95%;
+  margin-top: 10px;
+}
+
+.Activities__List__Item:nth-child(even)
+  .Activities__List__Item__Data__Description {
+  margin-left: 5%;
+}
+
+@media (min-width: 992px) {
+  .Activities__List__Item {
+    display: grid;
+    grid: auto / 40% 60%;
+    grid-gap: 20px;
+    width: 80%;
+    margin: 0 auto 20px;
+    border-top: 0;
+    padding-bottom: 0;
+  }
+
+  .Activities__List__Item:nth-child(odd) {
+    margin-right: 20%;
+  }
+
+  .Activities__List__Item:nth-child(even) {
+    margin-left: 20%;
+  }
+
+  .Activities__List__Item__Image {
+    height: 100%;
+    border: 3px solid #ccc;
+    border-bottom: 0;
+    border-right: 0;
+    margin-bottom: 0;
+  }
+
+  .Activities__List__Item:nth-child(even) .Activities__List__Item__Image {
+    border-left: 0;
+    border-right: 3px solid #ccc;
+  }
+}

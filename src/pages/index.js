@@ -3,30 +3,12 @@ import Typography from '@material-ui/core/Typography';
 
 import Landing from '../layouts/Landing';
 import SEO from '../components/seo';
+import Activities from '../components/Activities/Activities';
 
 const LAYOUT_CLASSES = {
   default: 'HomeLayout',
   scrolling: 'HomeLayout HomeLayout--scroll',
 };
-
-const BANNERS_DATA = [
-  {
-    img: '/assets/banners/facebook.jpg',
-    label: 'Facebook',
-  },
-  {
-    img: '/assets/banners/instragram.jpg',
-    label: 'Instagram',
-  },
-  {
-    img: '/assets/banners/twitter.jpg',
-    label: 'Twitter',
-  },
-  {
-    img: '/assets/banners/network.jpg',
-    label: 'Otras Redes',
-  },
-];
 
 const IndexPage = () => {
   const [className, setClassName] = useState(LAYOUT_CLASSES.default);
@@ -63,19 +45,8 @@ const IndexPage = () => {
         </div>
       </div>
 
-      <div className="HomeSection HomeSectionBannersLayer">
-        <div className="HomeSection__Grid">
-          {BANNERS_DATA.map(({ img, label }, i) => (
-            <div key={i} className="HomeSection__Grid__Item">
-              <img
-                src={img}
-                alt={label}
-                className="HomeSection__Grid__Item__Image"
-              />
-              <div className="HomeSection__Grid__Item__Label">{label}</div>
-            </div>
-          ))}
-        </div>
+      <div className="HomeSection HomeSectionActivitiesLayer">
+        <Activities />
       </div>
     </Landing>
   );

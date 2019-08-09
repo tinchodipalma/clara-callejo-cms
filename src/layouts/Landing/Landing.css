@@ -76,68 +76,14 @@
   margin-bottom: 0;
 }
 
-.HomeLayout .HomeSection.HomeSectionBannersLayer {
-  padding: 0;
-}
-
-.HomeLayout .HomeSectionBannersLayer .HomeSection__Grid {
-  display: grid;
-  grid: auto / repeat(1, 1fr);
-  grid-gap: 0;
-  border: 3px solid #999;
-  border-left: 0;
-  border-right: 0;
-}
-
-.HomeLayout .HomeSectionBannersLayer .HomeSection__Grid__Item {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.HomeLayout .HomeSection__Grid__Item .HomeSection__Grid__Item__Image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-.HomeLayout .HomeSection__Grid__Item:hover .HomeSection__Grid__Item__Image {
-  transform: scale(1.05, 1.05);
-}
-
-.HomeLayout .HomeSection__Grid__Item .HomeSection__Grid__Item__Label {
-  position: relative;
-  z-index: 1;
-  padding: 35px 0;
-  text-align: center;
-  font-weight: 500;
-  font-size: 18px;
-  text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
-    background 0.3s ease-in-out;
-  opacity: 0;
-}
-
-.HomeLayout .HomeSection__Grid__Item:hover .HomeSection__Grid__Item__Label {
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.7);
-  transform: scale(1.05, 1.05);
+.HomeSectionActivitiesLayer {
+  background: #fff;
 }
 
 @media (min-width: 576px) {
   .HomeLayout .HomeSection {
     min-height: calc(100vh - 100px);
     padding: 90px calc(5% + 12px);
-  }
-
-  .HomeLayout .HomeSectionBannersLayer .HomeSection__Grid {
-    grid: auto / repeat(2, 1fr);
   }
 }
 
@@ -157,9 +103,5 @@
 @media (min-width: 1200px) {
   .HomeLayout .HomeSection {
     padding: 90px calc(10% + 12px);
-  }
-
-  .HomeLayout .HomeSectionBannersLayer .HomeSection__Grid {
-    grid: auto / repeat(4, 1fr);
   }
 }
