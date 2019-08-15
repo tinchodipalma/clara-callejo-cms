@@ -13,7 +13,7 @@ collections:
     create: true
     fields:
       - {
-          name: 'contentType',
+          name: contentType,
           label: Content Type,
           widget: hidden,
           default: blog-post,
@@ -30,7 +30,7 @@ collections:
     create: true
     fields:
       - {
-          name: 'contentType',
+          name: contentType,
           label: Content Type,
           widget: hidden,
           default: page,
@@ -42,3 +42,77 @@ collections:
       - { name: title, label: Título }
       - { name: description, label: Descripción }
       - { name: body, label: Contenido, widget: markdown }
+
+  - name: settings
+    label: Configuración
+    create: false
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: siteConfig
+        file: content/settings/siteConfig.json
+        label: Datos del sitio
+        description: Datos generales del sitio
+        fields:
+          - {
+              name: siteTitle,
+              widget: string,
+              required: true,
+              label: Título del sitio,
+            }
+          - { name: author, widget: string, required: true, label: Autor }
+          - {
+              name: contactEmail,
+              widget: string,
+              required: true,
+              label: Email de contacto,
+            }
+
+      - name: landingConfig
+        file: content/settings/landingConfig.json
+        label: Página de inicio
+        description: Configuración de la página de inicio
+        fields:
+          - {
+              name: cover,
+              label: Imagen de fondo,
+              widget: image,
+              required: true,
+              media_library: { config: { multiple: false } },
+            }
+          - { name: coverTitle, label: Título, widget: string, required: true }
+          - {
+              name: coverSubtitle,
+              label: Subtítulo,
+              widget: string,
+              required: true,
+            }
+          - {
+              name: activitiesList,
+              label: Listado de Actividades,
+              widget: boolean,
+              default: true,
+            }
+
+  - name: activities
+    label: Actividades
+    folder: content/activities
+    create: true
+    fields:
+      - {
+          name: contentType,
+          label: Content Type,
+          widget: hidden,
+          default: activity-item,
+        }
+      - { name: enabled, label: Habilitado, widget: boolean, default: true }
+      - { name: title, label: Título, required: true }
+      - { name: description, label: Descripción, required: true }
+      - {
+          name: image,
+          label: Imagen,
+          required: true,
+          widget: image,
+          media_library: { config: { multiple: false } },
+        }
