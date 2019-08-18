@@ -19,6 +19,15 @@ const theme = createMuiTheme({
       secondary: '#ffffff',
     },
   },
+  typography: {
+    fontFamily: [
+      '"Josefin Sans"',
+      'Roboto',
+      'Helvetica',
+      'Arial',
+      'sans-serif',
+    ].join(','),
+  },
 });
 
 export default theme;

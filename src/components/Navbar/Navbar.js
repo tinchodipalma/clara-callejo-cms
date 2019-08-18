@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import CCLogo from '../../../public/assets/logos/CC.svg';
 
 import './Navbar.css';
 
@@ -47,12 +48,12 @@ const Navbar = () => {
   return (
     <AppBar position="sticky" className="Navbar">
       <Toolbar className="Navbar__Toolbar">
-        <div className="Navbar__Col"></div>
         <div className="Navbar__Col">
-          <div className="Navbar__SiteTitle">
-            <Typography variant="h6">Clara Callejo</Typography>
+          <div className="Navbar__Logo">
+            <img src={CCLogo} alt="Clara Callejo Logo" />
           </div>
         </div>
+        <div className="Navbar__Col"></div>
         <div className="Navbar__Col">
           <div className="Navbar__Menu">
             <div className="Navbar__Menu__Icon">

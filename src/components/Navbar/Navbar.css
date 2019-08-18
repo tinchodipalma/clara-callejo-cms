@@ -9,12 +9,19 @@
 
 .Navbar__Col:last-child {
   margin-left: auto;
-  margin-top: auto;
 }
 
-.Navbar__SiteTitle {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+.Navbar__Logo {
+  height: 42px;
+  width: auto;
+  overflow: hidden;
+}
+
+.Navbar__Logo img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  margin-right: 20px;
 }
 
 .Navbar__Menu {
@@ -60,6 +67,11 @@
 @media (min-width: 992px) {
   .Navbar .Navbar__Toolbar {
     margin: 0 7%;
+  }
+
+  .Navbar__Col:last-child {
+    margin-left: auto;
+    margin-top: auto;
   }
 
   .Navbar__Menu__Icon {

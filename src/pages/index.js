@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 
 import Landing from '../layouts/Landing';
 import SEO from '../components/seo';
+import CCLogo from '../../public/assets/logos/CC.svg';
 import Activities from '../components/Activities/Activities';
 
 const LAYOUT_CLASSES = {
@@ -36,6 +37,7 @@ const IndexPage = () => {
       <div className="HomeSection HomeSectionStartLayer">
         <div></div>
         <div className="HomeSection__Main">
+          <img src={CCLogo} alt="Clara Callejo Logo" />
           <Typography variant="h3" color="secondary" className="Home__Slogan">
             Clara Callejo
           </Typography>

@@ -99,6 +99,8 @@ collections:
     label: Actividades
     folder: content/activities
     create: true
+    editor:
+      preview: false
     fields:
       - {
           name: contentType,
