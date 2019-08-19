@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Typography from '@material-ui/core/Typography';
-
 import Landing from '../layouts/Landing';
 import SEO from '../components/seo';
-import CCLogo from '../../public/assets/logos/CC.svg';
 import Activities from '../components/Activities/Activities';
+import Logo from '../components/Logo';
 
 const LAYOUT_CLASSES = {
   default: 'HomeLayout',
@@ -37,7 +36,7 @@ const IndexPage = () => {
       <div className="HomeSection HomeSectionStartLayer">
         <div></div>
         <div className="HomeSection__Main">
-          <img src={CCLogo} alt="Clara Callejo Logo" />
+          <Logo />
           <Typography variant="h3" color="secondary" className="Home__Slogan">
             Clara Callejo
           </Typography>
