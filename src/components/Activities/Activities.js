@@ -57,7 +57,7 @@ const Activities = () => (
               </Typography>
             </div>
             <div className="Activities__List__Item__Data__Description">
-              <Typography variant="body">{description}</Typography>
+              <Typography variant="body1">{description}</Typography>
             </div>
           </div>
         </div>

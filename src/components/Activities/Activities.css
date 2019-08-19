@@ -6,7 +6,7 @@
 .Activities__List__Item {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 24px);
+  width: 100%;
   margin: 20px auto;
   border-top: 1px solid #ccc;
   border-bottom: 3px solid #ccc;
