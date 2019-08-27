@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Landing from '../layouts/Landing';
 import SEO from '../components/seo';
-import Activities from '../components/Activities/Activities';
+import Activities from '../components/Activities';
+import Clients from '../components/Clients';
 import Logo from '../components/Logo';
 
 const LAYOUT_CLASSES = {
@@ -48,6 +49,10 @@ const IndexPage = () => {
 
       <div className="HomeSection HomeSectionActivitiesLayer">
         <Activities />
+      </div>
+
+      <div className="HomeSection HomeSectionClientsLayer">
+        <Clients />
       </div>
     </Landing>
   );

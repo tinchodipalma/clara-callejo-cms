@@ -1,0 +1,85 @@
+.Clients {
+  display: flex;
+  flex-direction: column;
+}
+
+.Clients__Title {
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 20px;
+}
+
+.Clients__Title::after {
+  content: '';
+  width: 60%;
+  height: 2px;
+  background: #ff9d8d;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.Clients__Title:hover::after {
+  width: 80%;
+}
+
+.Clients__List {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.Clients__List::-webkit-scrollbar {
+  display: none;
+}
+
+.Clients__List__Item {
+  flex: 0 0 75%;
+  align-items: center;
+  margin-right: 5px;
+  border: 2px solid #eee;
+  background: #fafafa;
+  transition: border 0.3s ease-in-out;
+  padding: 10px;
+}
+
+.Clients__List__Item:last-child {
+  margin-right: 0;
+}
+
+.Clients__List__Item > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: -webkit-filter 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.Clients__List__Item:hover {
+  border: 2px solid #ff9d8d;
+}
+
+.Clients__List__Item:hover > img {
+  -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0);
+}
+
+@media (min-width: 992px) {
+  .Clients__List {
+    display: grid;
+    grid: auto / repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    overflow: hidden;
+  }
+
+  .Clients__List__Item {
+    margin-right: 0;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
+import { Typography } from '@material-ui/core';
 
 import './Activities.css';
-import { Typography } from '@material-ui/core';
 
 const ACTIVITIES_DATA = [
   {
