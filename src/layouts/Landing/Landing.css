@@ -2,6 +2,10 @@
   padding-bottom: 0;
 }
 
+.LandingLayout .MuiFormLabel-root {
+  color: #c96d60;
+}
+
 .LandingLayout .Footer {
   margin-top: 0;
 }
@@ -77,6 +81,7 @@
   margin-bottom: 0;
 }
 
+.HomeSectionContactLayer,
 .HomeSectionActivitiesLayer {
   background: #fff;
 }

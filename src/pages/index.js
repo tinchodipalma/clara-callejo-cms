@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 import Activities from '../components/Activities';
 import Clients from '../components/Clients';
 import Logo from '../components/Logo';
+import Contact from '../components/Contact';
 
 const LAYOUT_CLASSES = {
   default: 'HomeLayout',
@@ -53,6 +54,10 @@ const IndexPage = () => {
 
       <div className="HomeSection HomeSectionClientsLayer">
         <Clients />
+      </div>
+
+      <div className="HomeSection HomeSectionContactLayer">
+        <Contact />
       </div>
     </Landing>
   );
