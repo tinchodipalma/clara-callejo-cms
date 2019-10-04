@@ -1,0 +1,20 @@
+.MainSection__Title {
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 20px;
+}
+
+.MainSection__Title::after {
+  content: '';
+  width: 60%;
+  height: 2px;
+  background: #ff9d8d;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.MainSection__Title:hover::after {
+  width: 80%;
+}

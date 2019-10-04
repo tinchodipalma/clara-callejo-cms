@@ -5,6 +5,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './theme';
 
+import './main.css';
+
 const Theme = (props) => (
   <React.Fragment>
     <Helmet>

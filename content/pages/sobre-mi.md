@@ -2,6 +2,7 @@
 contentType: page
 enabled: true
 menu: true
+aside: true
 path: about
 title: Sobre Mi
 description: Página de mi

@@ -2,6 +2,7 @@
 contentType: page
 enabled: true
 menu: true
+aside: true
 menuTitle: jesi ejemplo
 path: jesi
 title: Jesi Titulo

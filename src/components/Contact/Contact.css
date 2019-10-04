@@ -3,28 +3,6 @@
   flex-direction: column;
 }
 
-.Contact__Title {
-  position: relative;
-  padding: 0 0 10px;
-  margin-bottom: 20px;
-  text-align: right;
-}
-
-.Contact__Title::after {
-  content: '';
-  width: 60%;
-  height: 2px;
-  background: #ff9d8d;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transition: width 0.3s ease-in-out;
-}
-
-.Contact__Title:hover::after {
-  width: 80%;
-}
-
 .Contact__Form {
   display: grid;
   grid: auto / auto;

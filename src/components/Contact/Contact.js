@@ -8,7 +8,7 @@ import './Contact.css';
 
 const Contact = () => (
   <div className="Contact">
-    <div className="Contact__Title">
+    <div className="Contact__Title MainSection__Title">
       <Typography variant="h4" color="secondary">
         Contacto
       </Typography>

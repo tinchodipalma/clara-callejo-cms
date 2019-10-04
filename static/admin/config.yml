@@ -11,6 +11,8 @@ collections:
     label: Blog
     folder: content/blog
     create: true
+    editor:
+      preview: false
     fields:
       - {
           name: contentType,
@@ -28,6 +30,8 @@ collections:
     label: Páginas
     folder: content/pages
     create: true
+    editor:
+      preview: false
     fields:
       - {
           name: contentType,
@@ -35,9 +39,10 @@ collections:
           widget: hidden,
           default: page,
         }
-      - { name: 'enabled', label: Habilitado, widget: boolean, default: true }
-      - { name: 'menu', label: Menú, widget: boolean, default: false }
-      - { name: 'menuTitle', label: Título de Menú }
+      - { name: enabled, label: Habilitado, widget: boolean, default: true }
+      - { name: aside, label: Barra Lateral, widget: boolean, default: true }
+      - { name: menu, label: Menú, widget: boolean, default: false }
+      - { name: menuTitle, label: Título de Menú }
       - { name: path, label: Path }
       - { name: title, label: Título }
       - { name: description, label: Descripción }
@@ -111,6 +116,53 @@ collections:
       - { name: enabled, label: Habilitado, widget: boolean, default: true }
       - { name: title, label: Título, required: true }
       - { name: description, label: Descripción, required: true }
+      - {
+          name: image,
+          label: Imagen,
+          required: true,
+          widget: image,
+          media_library: { config: { multiple: false } },
+        }
+
+  - name: clients
+    label: Clientes
+    folder: content/clients
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          name: contentType,
+          label: Content Type,
+          widget: hidden,
+          default: client-item,
+        }
+      - { name: enabled, label: Habilitado, widget: boolean, default: true }
+      - { name: label, label: Nombre, required: true }
+      - {
+          name: image,
+          label: Imagen,
+          required: true,
+          widget: image,
+          media_library: { config: { multiple: false } },
+        }
+
+  - name: aside
+    label: Barra Lateral
+    folder: content/aside
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          name: contentType,
+          label: Content Type,
+          widget: hidden,
+          default: aside-item,
+        }
+      - { name: enabled, label: Habilitado, widget: boolean, default: true }
+      - { name: label, label: Nombre, required: true }
+      - { name: link, label: Enlace, required: true }
       - {
           name: image,
           label: Imagen,

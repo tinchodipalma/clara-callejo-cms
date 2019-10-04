@@ -1,54 +1,48 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
 
 import './Clients.css';
 
-const CLIENTS_DATA = [
-  {
-    img: '/assets/logos/logo1.png',
-    label: 'Mercado Libre',
-  },
-  {
-    img: '/assets/logos/logo2.png',
-    label: 'PlayStation',
-  },
-  {
-    img: '/assets/logos/logo3.png',
-    label: 'Nintendo',
-  },
-  {
-    img: '/assets/logos/logo4.png',
-    label: 'SayMood',
-  },
-  {
-    img: '/assets/logos/logo5.png',
-    label: 'Coca Cola',
-  },
-  {
-    img: '/assets/logos/logo6.png',
-    label: 'Quilmes',
-  },
-  {
-    img: '/assets/logos/logo7.png',
-    label: 'Chanel',
-  },
-];
+const Clients = () => {
+  const data = useStaticQuery(graphql`
+    query ClientsQuery {
+      allMarkdownRemark(filter: {frontmatter: {contentType: {eq: "client-item"}, enabled: {eq: true}}}) {
+        edges {
+          node {
+            frontmatter {
+              contentType
+              label
+              image
+            }
+          }
+        }
+      }
+    }    
+  `);
 
-const Clients = () => (
-  <div className="Clients">
-    <div className="Clients__Title">
-      <Typography variant="h4" color="secondary">
-        Clientes
-      </Typography>
+  const clients = data.allMarkdownRemark.edges.map(({ node: { frontmatter } }) => frontmatter);
+
+  if (!clients.length) {
+    return null;
+  }
+
+  return (
+    <div className="Clients">
+      <div className="Clients__Title MainSection__Title">
+        <Typography variant="h4" color="secondary">
+          Clientes
+        </Typography>
+      </div>
+      <div className="Clients__List">
+        {clients.map(({ image, label }, i) => (
+          <div key={i} className="Clients__List__Item" title={label}>
+            <img src={image} alt={label} />
+          </div>
+        ))}
+      </div>
     </div>
-    <div className="Clients__List">
-      {CLIENTS_DATA.map(({ img, label }, i) => (
-        <div key={i} className="Clients__List__Item" title={label}>
-          <img src={img} alt={label} />
-        </div>
-      ))}
-    </div>
-  </div>
-);
+  );
+};
 
 export default Clients;

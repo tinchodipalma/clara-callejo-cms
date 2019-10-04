@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogPostComponent = path.resolve(`./src/templates/blog-post.js`);
-  const custonPageComponent = path.resolve(`./src/templates/custom-page.js`);
+  const custonPageComponent = path.resolve(`./src/templates/CustomPage/index.js`);
   return graphql(
     `
       {
