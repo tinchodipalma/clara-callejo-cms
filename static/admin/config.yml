@@ -76,26 +76,30 @@ collections:
         label: Sobre Mi
         description: Datos Sobre Mi
         fields:
-          - {
-            name: contentType,
-            label: Content Type,
-            widget: hidden,
-            default: aboutme-item,
-          }
-          - {
-            name: images,
-            label: Imágenes,
-            widget: list,
-            field: {
-              name: image,
+          - name: contentType
+            label: Content Type
+            widget: hidden
+            default: aboutme-item
+          - name: images
+            label: Imágenes
+            widget: list
+            field:
+              name: image
+              label: Imagen
               widget: image
-            }
-          }
-          - {
-            name: title,
-            label: Título,
-            required: true,
-          }
+          - name: group
+            label: Grupo
+            widget: list
+            fields:
+              - name: groupTitle
+                label: Título de Grupo
+                widget: string
+              - name: groupData
+                label: Contenido del Grupo
+                widget: list
+                field:
+                  name: groupDataItem
+                  label: Item
 
 
   - name: pages
