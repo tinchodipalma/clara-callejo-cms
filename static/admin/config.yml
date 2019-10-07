@@ -7,47 +7,6 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
-    create: true
-    editor:
-      preview: false
-    fields:
-      - {
-          name: contentType,
-          label: Content Type,
-          widget: hidden,
-          default: blog-post,
-        }
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
-      - { name: body, label: Body, widget: markdown }
-
-  - name: pages
-    label: Páginas
-    folder: content/pages
-    create: true
-    editor:
-      preview: false
-    fields:
-      - {
-          name: contentType,
-          label: Content Type,
-          widget: hidden,
-          default: page,
-        }
-      - { name: enabled, label: Habilitado, widget: boolean, default: true }
-      - { name: aside, label: Barra Lateral, widget: boolean, default: true }
-      - { name: menu, label: Menú, widget: boolean, default: false }
-      - { name: menuTitle, label: Título de Menú }
-      - { name: path, label: Path }
-      - { name: title, label: Título }
-      - { name: description, label: Descripción }
-      - { name: body, label: Contenido, widget: markdown }
-
   - name: settings
     label: Configuración
     create: false
@@ -94,11 +53,101 @@ collections:
               required: true,
             }
           - {
+              name: aboutMe,
+              label: Sobre Mi,
+              widget: boolean,
+              default: true,
+            }
+          - {
               name: activitiesList,
               label: Listado de Actividades,
               widget: boolean,
               default: true,
             }
+          - {
+              name: clientsList,
+              label: Listado de Clientes,
+              widget: boolean,
+              default: true,
+            }
+
+  - name: pages
+    label: Páginas
+    folder: content/pages
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          name: contentType,
+          label: Content Type,
+          widget: hidden,
+          default: page,
+        }
+      - { name: enabled, label: Habilitado, widget: boolean, default: true }
+      - { name: aside, label: Barra Lateral, widget: boolean, default: true }
+      - { name: menu, label: Menú, widget: boolean, default: false }
+      - { name: menuTitle, label: Título de Menú }
+      - { name: path, label: Path }
+      - { name: title, label: Título }
+      - { name: description, label: Descripción }
+      - { name: body, label: Contenido, widget: markdown }
+
+  - name: blog
+    label: Blog
+    folder: content/blog
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          name: contentType,
+          label: Content Type,
+          widget: hidden,
+          default: blog-post,
+        }
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: description, label: Description }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: aboutMe
+    label: Sobre Mi
+    folder: content/aboutMe
+    create: false
+    editor:
+      preview: false
+    files:
+      - name: aboutMe
+        file: content/aboutMe/aboutMe.json
+        label: Sobre Mi
+        description: Sección Sobre Mi
+        fields:
+          - name: images,
+            label: Imágenes Sobre Mi,
+            widget: list,
+            field: {
+              label: Imagen Sobre Mi,
+              name: image,
+              widget: image
+            }
+          - name: data,
+            label: Datos Sobre Mi,
+            widget: list,
+            fields:
+              - {
+                name: groupTitle,
+                label: Título de Grupo,
+                widget: string,
+                required: true,
+              }
+              - {
+                name: groupData,
+                label: Items de Grupo,
+                widget: list,
+                field: { name: groupDataItem, widget: string }
+              }
 
   - name: activities
     label: Actividades
