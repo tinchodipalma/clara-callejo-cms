@@ -1,16 +1,3 @@
 {
-  "images": [
-    {
-      "image": "path/to/image.jpg"
-    }
-  ],
-  "data": [
-    {
-      "groupTitle": "Grupo 1",
-      "groupData": [
-        "Tincho",
-        "Prueba"
-      ]
-    }
-  ]
+  "title": "tincho"
 }
