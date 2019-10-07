@@ -1,3 +1,14 @@
 {
-  "title": "tincho"
+  "images": [
+    "/assets/iacc.png"
+  ],
+  "group": [
+    {
+      "groupTitle": "Tincho",
+      "groupData": [
+        "Aca va uno",
+        "Y aca otroooo"
+      ]
+    }
+  ]
 }
