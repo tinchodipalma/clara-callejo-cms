@@ -1,7 +1,16 @@
 {
   "images": [
     {
-      "image": "tincho.jpg"
+      "image": "path/to/image.jpg"
+    }
+  ],
+  "data": [
+    {
+      "groupTitle": "Grupo 1",
+      "groupData": [
+        "Tincho",
+        "Prueba"
+      ]
     }
   ]
 }
