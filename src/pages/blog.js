@@ -7,7 +7,7 @@ import SEO from '../components/seo';
 class Blog extends React.Component {
   render() {
     const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
+    const siteTitle = data.allSiteJson.nodes[0].siteTitle;
     const posts = data.allMarkdownRemark.edges;
 
     return (
@@ -45,9 +45,9 @@ export default Blog;
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
+    allSiteJson {
+      nodes {
+        siteTitle
       }
     }
     allMarkdownRemark(

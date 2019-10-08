@@ -1,17 +1,8 @@
 module.exports = {
-  siteMetadata: {
-    // edit below
-    title: `Clara Callejo`,
-    author: `Clara Callejo`,
-    description: `Sitio web de Clara Callejo`,
-    siteUrl: `https://claracallejo.com.ar/`,
-    social: {
-      twitter: `clarucallejo`,
-    },
-  },
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
+    `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-feed`,
@@ -55,8 +46,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/settings`,
-        name: `settings`,
+        path: `${__dirname}/content/settings/aboutMe`,
+        name: `aboutMe`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/settings/site`,
+        name: `siteConfig`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/settings/landing`,
+        name: `landing`,
       },
     },
     {

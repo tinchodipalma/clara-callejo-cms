@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogPostComponent = path.resolve(`./src/templates/blog-post.js`);
-  const custonPageComponent = path.resolve(`./src/templates/CustomPage/index.js`);
+  const customPageComponent = path.resolve(`./src/templates/CustomPage/index.js`);
   return graphql(
     `
       {
@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     edges.forEach((edge, index) => {
       let edgePath = edge.node.fields.slug;
-      let component = custonPageComponent;
+      let component = customPageComponent;
 
       if (edge.node.frontmatter.contentType !== 'page') {
         edgePath = `blog${edgePath}`;

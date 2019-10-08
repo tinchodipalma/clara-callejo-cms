@@ -9,7 +9,7 @@ import './custom-page.css';
 
 const CustomPageTemplate = (props) => {
   const post = props.data.markdownRemark;
-  const siteTitle = props.data.site.siteMetadata.title;
+  const siteTitle = props.data.allSiteJson.nodes[0].siteTitle;
 
   console.log(props.pageContext, props);
 
@@ -43,10 +43,10 @@ export default CustomPageTemplate;
 
 export const pageQuery = graphql`
   query PageBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
+    allSiteJson {
+      nodes {
         author
+        siteTitle
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

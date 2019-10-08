@@ -15,26 +15,45 @@ collections:
       preview: false
     files:
       - name: siteConfig
-        file: content/settings/siteConfig.json
+        file: content/settings/site/siteConfig.json
         label: Datos del sitio
         description: Datos generales del sitio
         fields:
-          - {
-              name: siteTitle,
-              widget: string,
-              required: true,
-              label: Título del sitio,
-            }
-          - { name: author, widget: string, required: true, label: Autor }
-          - {
-              name: contactEmail,
-              widget: string,
-              required: true,
-              label: Email de contacto,
-            }
+          - name: siteTitle
+            widget: string
+            required: true
+            label: Título del sitio
+          - name: siteDescription
+            widget: string
+            required: true
+            label: Descripción del sitio
+          - name: author
+            widget: string
+            required: true
+            label: Autor
+          - name: contactEmail
+            widget: string
+            required: true
+            label: Email de contacto
+          - name: contactPhone
+            widget: string
+            label: Teléfono de contacto
+          - name: socialNetworks
+            label: Redes Sociales
+            widget: object
+            fields:
+              - name: facebook
+                label: Facebook
+              - name: twitter
+                label: Twitter
+              - name: instagram
+                label: Instagram
+              - name: linkedin
+                label: LinkedIn
+
 
       - name: landingConfig
-        file: content/settings/landingConfig.json
+        file: content/settings/landing/landingConfig.json
         label: Página de inicio
         description: Configuración de la página de inicio
         fields:
@@ -72,7 +91,7 @@ collections:
             }
 
       - name: aboutMeConfig
-        file: content/settings/aboutMe.json
+        file: content/settings/aboutMe/aboutMe.json
         label: Sobre Mi
         description: Datos Sobre Mi
         fields:
@@ -87,8 +106,8 @@ collections:
               name: image
               label: Imagen
               widget: image
-          - name: group
-            label: Grupo
+          - name: groups
+            label: Grupos
             widget: list
             fields:
               - name: groupTitle
