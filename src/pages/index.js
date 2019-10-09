@@ -13,7 +13,8 @@ const LAYOUT_CLASSES = {
   scrolling: 'HomeLayout HomeLayout--scroll',
 };
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const landingConfig = data.allLandingJson.nodes[0];
   const [className, setClassName] = useState(LAYOUT_CLASSES.default);
 
   const onScroll = (event) => {
@@ -32,34 +33,45 @@ const IndexPage = () => {
     };
   }, []);
 
+  const homeSectionStyles = {
+    background: `url('${landingConfig.cover}') #fafafa no-repeat`,
+    backgroundSize: '100%',
+  };
+
   return (
     <Landing className={className}>
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
-      <div className="HomeSection HomeSectionStartLayer">
+      <div className="HomeSection HomeSectionStartLayer" style={homeSectionStyles}>
         <div></div>
         <div className="HomeSection__Main">
           <Logo />
           <Typography variant="h3" color="secondary" className="Home__Slogan">
-            Clara Callejo
+            {landingConfig.coverTitle}
           </Typography>
           <Typography variant="h5" className="Home__Slogan">
-            Asesoramiento en Comunicación
+            {landingConfig.coverSubtitle}
           </Typography>
         </div>
       </div>
 
-      <div className="HomeSection HomeSectionAboutMeLayer">
-        <AboutMe />
-      </div>
+      {!!landingConfig.aboutMe &&
+        <div className="HomeSection HomeSectionAboutMeLayer">
+          <AboutMe />
+        </div>
+      }
 
-      <div className="HomeSection HomeSectionActivitiesLayer">
-        <Activities />
-      </div>
+      {!!landingConfig.activitiesList &&
+        <div className="HomeSection HomeSectionActivitiesLayer">
+          <Activities />
+        </div>
+      }
 
-      <div className="HomeSection HomeSectionClientsLayer">
-        <Clients />
-      </div>
+      {!!landingConfig.clientsList &&
+        <div className="HomeSection HomeSectionClientsLayer">
+          <Clients />
+        </div>
+      }
 
       <div className="HomeSection HomeSectionContactLayer">
         <Contact />
@@ -69,3 +81,18 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query LandingQuery {
+    allLandingJson {
+      nodes {
+        aboutMe
+        activitiesList
+        clientsList
+        cover
+        coverTitle
+        coverSubtitle
+      }
+    }  
+  }
+`;

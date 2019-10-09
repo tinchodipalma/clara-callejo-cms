@@ -24,7 +24,7 @@ const AboutMe = () => {
   const aboutMeData = data.allAboutMeJson.nodes[0];
   const imagesLength = aboutMeData.images.length;
 
-  const [activeImage, setActiveImage] = useState(2);
+  const [activeImage, setActiveImage] = useState(0);
 
   const onPrevImage = () => {
     const newIndex = activeImage - 1 <= 0 ? 0 : activeImage - 1;

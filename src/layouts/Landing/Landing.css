@@ -47,7 +47,6 @@
   display: grid;
   grid: auto / repeat(1, 1fr);
   grid-gap: 20px;
-  background: url('/assets/backgrounds/whitepencilsbg.jpg') #fafafa no-repeat;
   background-size: cover;
 }
 
@@ -87,8 +86,11 @@
 }
 
 @media (min-width: 576px) {
+  .HomeLayout .HomeSectionStartLayer {
+    min-height: 100vh;
+  }
+
   .HomeLayout .HomeSection {
-    min-height: calc(100vh - 100px);
     padding: 90px calc(5% + 12px);
   }
 }
