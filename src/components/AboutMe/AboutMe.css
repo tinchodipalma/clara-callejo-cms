@@ -1,0 +1,97 @@
+.AboutMe__Images,
+.AboutMe__Images__Container {
+  position: relative;
+}
+
+.AboutMe__Images__Arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.AboutMe__Images__Arrow__Next {
+  right: 0;
+}
+
+.AboutMe__Images__Slider {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: calc(90% - 100px);
+  margin: 0 auto;
+}
+
+.AboutMe__Images__Indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  padding: 2px 5px;
+}
+
+.AboutMe__Images__Item {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  margin: 0 auto;
+  width: 0;
+}
+
+.AboutMe__Images__Item.active {
+  width: 100%;
+  opacity: 1;
+}
+
+.AboutMe__Images__Item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.AboutMe__Data {
+  display: grid;
+  grid-gap: 20px;
+  margin: 20px auto 0;
+}
+
+.AboutMe__Data__Group {
+  padding: 10px;
+}
+
+.AboutMe__Data__Group:nth-child(even) {
+  background: rgba(0, 0, 0, 0.030);
+}
+
+.AboutMe__Data__Group__Content {
+  padding-top: 10px;
+}
+
+.AboutMe__Data__Group__Content__List {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.AboutMe__Data__Group__Content__List__Item {
+  margin-bottom: 7px;
+}
+
+@media (min-width: 992px) {
+  .AboutMe__Content {
+    display: grid;
+    grid: auto / 35% 65%;
+    grid-gap: 20px;
+    width: calc(100% - 20px);
+  }
+
+  .AboutMe__Data {
+    grid: auto / repeat(4, 1fr);
+    width: calc(100% - 80px);
+  }
+
+  .AboutMe__Data__Group:nth-child(even) {
+    background: transparent;
+  }
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Landing from '../layouts/Landing';
 import SEO from '../components/seo';
+import AboutMe from '../components/AboutMe';
 import Activities from '../components/Activities';
 import Clients from '../components/Clients';
 import Logo from '../components/Logo';
@@ -46,6 +47,10 @@ const IndexPage = () => {
             Asesoramiento en Comunicación
           </Typography>
         </div>
+      </div>
+
+      <div className="HomeSection HomeSectionAboutMeLayer">
+        <AboutMe />
       </div>
 
       <div className="HomeSection HomeSectionActivitiesLayer">
