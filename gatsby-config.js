@@ -1,4 +1,11 @@
 module.exports = {
+  siteMetadata: {
+    // edit below
+    title: `Clara Callejo`,
+    author: `Clara Callejo`,
+    description: `Sitio web de Clara Callejo`,
+    siteUrl: `https://claracallejo.com.ar/`,
+  },
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
@@ -110,7 +117,7 @@ module.exports = {
         theme_color: `#ffe1d1`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `static/assets/logos/CC.svg`,
       },
     },
     {

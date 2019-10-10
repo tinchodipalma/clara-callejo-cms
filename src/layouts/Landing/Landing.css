@@ -29,10 +29,6 @@
   box-shadow: none;
 }
 
-.HomeLayout:not(.HomeLayout--scroll) .Navbar:not(.Navbar--opened) .Navbar__Menu__List__Item a {
-  border-color: transparent;
-}
-
 .HomeLayout--scroll .Navbar {
   border-bottom: 1px solid #e6c8b8;
 }
@@ -96,6 +92,10 @@
 }
 
 @media (min-width: 992px) {
+  .HomeLayout:not(.HomeLayout--scroll) .Navbar .Navbar__Menu__List__Item a {
+    border-color: transparent;
+  }
+  
   .HomeLayout .HomeSectionStartLayer {
     padding: 90px 42px;
   }
