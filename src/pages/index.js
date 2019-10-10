@@ -34,8 +34,7 @@ const IndexPage = ({ data }) => {
   }, []);
 
   const homeSectionStyles = {
-    background: `url('${landingConfig.cover}') #fafafa no-repeat`,
-    backgroundSize: '100%',
+    background: `url('${landingConfig.cover}') 0% 0% / cover no-repeat rgb(250, 250, 250)`,
   };
 
   return (

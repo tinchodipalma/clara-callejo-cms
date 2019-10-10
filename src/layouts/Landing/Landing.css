@@ -29,7 +29,7 @@
   box-shadow: none;
 }
 
-.HomeLayout:not(.HomeLayout--scroll) .Navbar .Navbar__Menu__List__Item a {
+.HomeLayout:not(.HomeLayout--scroll) .Navbar:not(.Navbar--opened) .Navbar__Menu__List__Item a {
   border-color: transparent;
 }
 
@@ -110,9 +110,17 @@
     padding: 120px 0;
     height: 500px;
   }
+
+  .LandingLayout .Footer {
+    padding: 90px calc(7% + 12px);
+  }  
 }
 
 @media (min-width: 1200px) {
+  .LandingLayout .Footer {
+    padding: 20px calc(10% + 12px);
+  }  
+
   .HomeLayout .HomeSection {
     padding: 90px calc(10% + 12px);
   }

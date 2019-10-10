@@ -5,6 +5,9 @@
 .Navbar .Navbar__Toolbar {
   margin: 0 3%;
   padding: 0 12px;
+  position: initial;
+  position: unset;
+  z-index: 100000;
 }
 
 .Navbar__Col:last-child {
@@ -22,10 +25,6 @@
   height: 100%;
   object-fit: contain;
   margin-right: 20px;
-}
-
-.Navbar__Menu {
-  position: relative;
 }
 
 .Navbar__Menu__List {
@@ -58,13 +57,70 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
+.Navbar__Fade {
+  background: transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  transition: background 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
 @media (min-width: 576px) {
   .Navbar .Navbar__Toolbar {
     margin: 0 5%;
   }
 }
 
+@media (max-width: 992px) {
+  .Navbar--opened .Navbar__Fade {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #ffe1d1;
+    overflow: none;
+    z-index: 100;
+  }
+
+  .Navbar--opened .Navbar__Menu__List {
+    display: block;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 50px 20px;
+    height: calc(100vh - 80px);
+    overflow: auto;
+  }
+
+  .Navbar--opened .Navbar__Menu__List .Navbar__Menu__List__Item {
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+  }
+
+  .Navbar--opened .Navbar__Menu__List .Navbar__Menu__List__Item a {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    border-bottom: 2px dotted #ff9d8d;
+  }
+
+  .Navbar--opened .Navbar__Menu__List .Navbar__Menu__List__Item:last-child a {
+    border-bottom: 0;
+  }
+}
+
 @media (min-width: 992px) {
+  .Navbar__Fade {
+    display: none;
+  }
+
   .Navbar .Navbar__Toolbar {
     margin: 0 7%;
   }

@@ -50,6 +50,16 @@ collections:
                 label: Instagram
               - name: linkedin
                 label: LinkedIn
+              - name: youtube
+                label: YouTube
+              - name: pinterest
+                label: Pinterest
+              - name: snapchat
+                label: Snapchat
+              - name: tiktok
+                label: TikTok
+              - name: tumblr
+                label: Tumblr
 
 
       - name: landingConfig

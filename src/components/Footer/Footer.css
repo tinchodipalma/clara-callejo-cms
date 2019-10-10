@@ -1,20 +1,125 @@
 .Footer {
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   margin-top: 30px;
   background: #af5a50;
   border-top: 2px solid #df8a80;
   color: #fafafa;
   display: grid;
-  grid: auto / repeat(3, 1fr);
-  padding: 20px;
+  grid: auto / repeat(1, 1fr);
+  padding: 0 calc(5% + 6px);
 }
 
 .Footer__Col {
   flex-grow: 1;
-  border-right: 2px dotted #df9a90;
-}
+  border-bottom: 1px dotted #df9a90;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  overflow: hidden;
+}  
 
 .Footer__Col:last-child {
   border-right: 0;
+  border-bottom: 0;
+}
+
+.Footer__Col__List {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Footer__SocialNetworksList {
+  width: 100%;
+  overflow: auto;
+  margin: -5px auto 0;
+}
+
+.Footer__SocialNetworksList li {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 0;
+}
+
+.Footer__SocialNetworksList img {
+  width: 32px;
+  height: 32px;
+  background: #ffcfbd;
+  border-radius: 4px;
+  padding: 1px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.Footer__SocialNetworksList a:hover img,
+.Footer__SocialNetworksList a:focus img,
+.Footer__SocialNetworksList a:active img {
+  transform: scale(1.3, 1.3);
+  background: #fff;
+}
+
+.Footer__DevelopedBy {
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  min-height: 70px;
+}
+
+.Footer__DevelopedBy code {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  left: 0;
+}
+
+.Footer__DevelopedBy .heart {
+  color: #E00;
+  text-shadow: 0 0 2px #FFF;
+  font-size: 24px;
+  font-family: serif;
+  vertical-align: middle;
+  display: inline-block;
+  animation-duration: 2s;
+  animation-name: heartbeat;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@media (min-width: 992px) {
+  .Footer {
+    grid: auto / repeat(3, 1fr);
+  }
+
+  .Footer__Col {
+    border-bottom: 0;
+    border-right: 2px dotted #df9a90;
+  }
+
+  .Footer__Col:first-child {
+    text-align: left;
+  }  
+
+  .Footer__Col:last-child {
+    border-right: 0;
+    text-align: right;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    color: #B00;
+    transform: scale(1, 1);
+  }
+  25% {
+    color: #D00;
+    transform: scale(1.7, 1.7);
+  }
+  50% {
+    color: #A00;
+    transform: scale(1.25, 1.25);
+  }
+  100% {
+    color: #C00;
+    transform: scale(1.4, 1.4);
+  }
 }
