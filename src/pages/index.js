@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Landing className={className}>
-      <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title="Inicio" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
       <div className="HomeSection HomeSectionStartLayer" style={homeSectionStyles}>
         <div></div>
