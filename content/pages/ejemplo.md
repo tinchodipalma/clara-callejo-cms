@@ -1,12 +1,13 @@
 ---
 contentType: page
 enabled: true
+aside: false
 menu: true
-aside: true
-menuTitle: Ejemplo
-path: ejemplo
-title: ejemplo
-description: eeeeejemplo
+menuTitle: 'Buscanos en las redes '
+path: Redes
+title: Buscanos en las redes!
+description: 'Usa las redes para comunicarte con nosotros. '
 ---
+Facebook: Clara Callejo - Asesoría en comunicación 
 
-Algo acaá
+Instagram: ComunicaciónCC
