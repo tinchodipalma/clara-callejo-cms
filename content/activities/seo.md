@@ -1,8 +1,10 @@
 ---
 contentType: activity-item
 enabled: true
-title: Search Engine Optimization
-description: Search Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationOptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationOptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationOptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine OptimizationSearch Engine Optimization
-image: /assets/iacc.png
+title: Diseño Gráfico
+description: >-
+  Papelería institucional Brochures y folletería Packaging Cartelería y
+  señalética Editorial Merchandising
+image: /assets/2-papeleria.jpg
 ---
 
