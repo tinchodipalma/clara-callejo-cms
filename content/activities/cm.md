@@ -1,8 +1,8 @@
 ---
 contentType: activity-item
 enabled: true
-title: CM
-description: Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager Community Manager 
-image: /assets/iacc.png
+title: 'Branding '
+description: 'Estrategia integral de marca Concepto de marca  Identidad visual '
+image: /assets/cc-1-.png
 ---
 
