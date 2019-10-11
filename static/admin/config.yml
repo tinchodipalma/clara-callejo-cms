@@ -44,22 +44,31 @@ collections:
             fields:
               - name: facebook
                 label: Facebook
+                required: false
               - name: twitter
                 label: Twitter
+                required: false
               - name: instagram
                 label: Instagram
+                required: false
               - name: linkedin
                 label: LinkedIn
+                required: false
               - name: youtube
                 label: YouTube
+                required: false
               - name: pinterest
                 label: Pinterest
+                required: false
               - name: snapchat
                 label: Snapchat
+                required: false
               - name: tiktok
                 label: TikTok
+                required: false
               - name: tumblr
                 label: Tumblr
+                required: false
 
 
       - name: landingConfig
