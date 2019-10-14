@@ -35,9 +35,11 @@ collections:
             widget: string
             required: true
             label: Email de contacto
+            required: false
           - name: contactPhone
             widget: string
             label: Teléfono de contacto
+            required: false
           - name: socialNetworks
             label: Redes Sociales
             widget: object
