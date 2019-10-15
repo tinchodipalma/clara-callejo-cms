@@ -1,8 +1,8 @@
 ---
 contentType: aside-item
-enabled: true
-label: Google
-link: https://google.com
+enabled: false
+label: 'Gmail '
+link: 'https://google.com'
 image: /assets/iacc.png
 ---
 
