@@ -1,8 +1,8 @@
 ---
 contentType: page
-enabled: true
-menu: true
+enabled: false
 aside: false
+menu: true
 menuTitle: Tincho
 path: tincho
 title: Tiiiincho
