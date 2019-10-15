@@ -158,6 +158,7 @@ collections:
       - { name: aside, label: Barra Lateral, widget: boolean, default: true }
       - { name: menu, label: Menú, widget: boolean, default: false }
       - { name: menuTitle, label: Título de Menú }
+      - { name: menuOrder, label: Orden del Menú (numérico y ascendente), default: '0' }
       - { name: path, label: Path }
       - { name: title, label: Título }
       - { name: description, label: Descripción }

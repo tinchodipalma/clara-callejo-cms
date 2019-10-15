@@ -9,10 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
+        allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 1000, filter: {frontmatter: {enabled: {eq: true}}}) {
           edges {
             node {
               fields {
@@ -20,6 +17,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                path
                 contentType
               }
             }
@@ -35,7 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
     const edges = result.data.allMarkdownRemark.edges;
 
     edges.forEach((edge, index) => {
-      let edgePath = edge.node.fields.slug;
+      let edgePath = edge.node.frontmatter.path || edge.node.fields.slug;
       let component = customPageComponent;
 
       if (edge.node.frontmatter.contentType !== 'page') {
@@ -44,7 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
 
       createPage({
-        path: edgePath,
+        path: edgePath.toLowerCase(),
         component,
         context: {
           slug: edge.node.fields.slug,

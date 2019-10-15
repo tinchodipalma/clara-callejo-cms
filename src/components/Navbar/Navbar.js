@@ -24,7 +24,7 @@ const Navbar = () => {
     graphql`
       query {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { fields: [frontmatter___menuOrder, frontmatter___date], order: [ASC, DESC] }
           limit: 1000
           filter: {
             frontmatter: {
@@ -41,7 +41,9 @@ const Navbar = () => {
               }
               frontmatter {
                 title
+                path
                 menuTitle
+                menuOrder
               }
             }
           }
@@ -51,7 +53,7 @@ const Navbar = () => {
   );
 
   const menuItems = allMarkdownRemark.edges.map(({ node }) => ({
-    slug: node.fields.slug,
+    slug: (node.frontmatter.path || node.fields.slug).toLowerCase(),
     name: node.frontmatter.menuTitle || node.frontmatter.title,
   }));
 
