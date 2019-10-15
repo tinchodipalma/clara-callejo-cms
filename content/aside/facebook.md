@@ -2,6 +2,7 @@
 contentType: aside-item
 enabled: true
 label: Facebook
-link: https://facebook.com
-image: /assets/iacc.png
+link: 'https://www.facebook.com/ClaraCallejoComunicacion/'
+image: /assets/copia-de-cc-2-.png
 ---
+

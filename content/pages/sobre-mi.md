@@ -1,15 +1,17 @@
 ---
 contentType: page
 enabled: true
-menu: true
 aside: true
-path: about
+menu: true
+menuTitle: 'Sobre mi '
+path: sobremi
 title: Sobre Mi
-description: Página de mi
+description: Clara Callejo
 ---
 
-Cómo funciona esto?
 
-![Instituto](/assets/iacc.png 'Instituto')
+![](/assets/foto.jpg "Clara Callejo")
 
-Vemos, así creo...
+Soy estudiante de la licenciatura en Comunicación Social de la Universidad de Córdoba. Me especialicé en comunicación institucional y estoy buscando hacerme camino en la asesoría para emprendedores.  
+
+Soy Community manager y te puedo ayudar en la gestión de las redes sociales de tu emprendimiento.

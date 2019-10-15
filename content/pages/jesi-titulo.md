@@ -1,8 +1,8 @@
 ---
 contentType: page
-enabled: true
-menu: true
+enabled: false
 aside: true
+menu: true
 menuTitle: jesi ejemplo
 path: jesi
 title: Jesi Titulo

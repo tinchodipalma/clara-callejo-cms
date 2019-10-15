@@ -1,7 +1,8 @@
 ---
 contentType: aside-item
 enabled: true
-label: Tincho
-link: https://tincho.com.ar
-image: /assets/iacc.png
+label: Instagram
+link: 'https://www.instagram.com/comunicacioncc/'
+image: /assets/copia-de-cc-1-.png
 ---
+
