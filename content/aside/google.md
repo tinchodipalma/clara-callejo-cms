@@ -1,8 +1,8 @@
 ---
 contentType: aside-item
 enabled: false
-label: 'Gmail '
-link: 'https://google.com'
-image: /assets/iacc.png
+label: Linkedin
+link: 'https://www.linkedin.com/in/claricallejo/'
+image: /assets/copia-de-cc-4-.png
 ---
 
