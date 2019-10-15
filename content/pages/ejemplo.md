@@ -1,7 +1,7 @@
 ---
 contentType: page
 enabled: true
-aside: false
+aside: true
 menu: true
 menuTitle: 'Buscanos en las redes '
 path: Redes
