@@ -8,7 +8,7 @@ path: sobremi
 title: Sobre Mi
 description: Clara Callejo
 ---
-Cómo funciona esto?
+
 
 ![](/assets/foto.jpg "Clara Callejo")
 
