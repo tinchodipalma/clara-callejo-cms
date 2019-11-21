@@ -57,6 +57,11 @@ const Navbar = () => {
     name: node.frontmatter.menuTitle || node.frontmatter.title,
   }));
 
+  menuItems.push({
+    slug: 'about-me',
+    name: 'Sobre Mi',
+  });
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const onMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);

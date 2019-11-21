@@ -119,6 +119,8 @@ collections:
             label: Content Type
             widget: hidden
             default: aboutme-item
+          - name: description
+            label: Descripción Sobre Mi
           - name: images
             label: Imágenes
             widget: list

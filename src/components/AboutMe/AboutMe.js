@@ -16,6 +16,7 @@ const AboutMe = () => {
             groupTitle
           }
           images
+          description
         }
       }
     }
@@ -70,22 +71,27 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="AboutMe__Data">
-          {aboutMeData.groups.map(({ groupTitle, groupData }, i) => (
-            <div className="AboutMe__Data__Group" key={i}>
-              <Typography variant="h6" color="secondary">
-                {groupTitle}
-              </Typography>
-              <div className="AboutMe__Data__Group__Content">
-                <ul className="AboutMe__Data__Group__Content__List">
-                  {groupData.map((groupDataItem, j) => (
-                    <li className="AboutMe__Data__Group__Content__List__Item" key={j}>
-                      {groupDataItem}
-                    </li>
-                  ))}
-                </ul>
+          <div className="AboutMe__Data__Description">
+            {aboutMeData.description.slice(0, 500)}
+          </div>
+          <div className="AboutMe__Data__Groups">
+            {aboutMeData.groups.map(({ groupTitle, groupData }, i) => (
+              <div className="AboutMe__Data__Group" key={i}>
+                <Typography variant="h6" color="secondary">
+                  {groupTitle}
+                </Typography>
+                <div className="AboutMe__Data__Group__Content">
+                  <ul className="AboutMe__Data__Group__Content__List">
+                    {groupData.map((groupDataItem, j) => (
+                      <li className="AboutMe__Data__Group__Content__List__Item" key={j}>
+                        {groupDataItem}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
