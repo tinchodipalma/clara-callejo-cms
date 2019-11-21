@@ -69,10 +69,6 @@
   padding: 10px;
 }
 
-.AboutMe__Data__Group:nth-child(even) {
-  background: rgba(0, 0, 0, 0.030);
-}
-
 .AboutMe__Data__Group__Content {
   padding-top: 10px;
 }
@@ -106,9 +102,5 @@
 
   .AboutMe__Data__Group {
     padding: 10px 0;
-  }
-
-  .AboutMe__Data__Group:nth-child(even) {
-    background: transparent;
   }
 }

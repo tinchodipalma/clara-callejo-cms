@@ -41,14 +41,15 @@ const Activities = () => {
             <div className="Activities__List__Item__Image">
               <img src={image} alt={title} />
             </div>
-            <div className="Activities__List__Item__Data">
-              <div className="Activities__List__Item__Data__Label">
-                <Typography variant="subtitle1" color="secondary">
-                  {title}
-                </Typography>
+            <div className="Activities__List__Item__Title">
+              {title}
+            </div>
+            <div className="Activities__List__Item__Description">
+              <div className="Activities__List__Item__Description__Title">
+                {title}
               </div>
-              <div className="Activities__List__Item__Data__Description">
-                <Typography variant="body2">{description}</Typography>
+              <div className="Activities__List__Item__Description__Text">
+                {description}
               </div>
             </div>
           </div>
