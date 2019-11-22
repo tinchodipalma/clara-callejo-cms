@@ -38,6 +38,9 @@ const Clients = () => {
         {clients.map(({ image, label }, i) => (
           <div key={i} className="Clients__List__Item" title={label}>
             <img src={image} alt={label} />
+            <div className="Clients__List__Item__Text">
+              {label}
+            </div>
           </div>
         ))}
       </div>

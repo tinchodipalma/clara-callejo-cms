@@ -17,13 +17,14 @@
 }
 
 .Clients__List__Item {
+  position: relative;
   flex: 0 0 75%;
   align-items: center;
   margin-right: 5px;
   border: 2px solid #eee;
   background: #fafafa;
   transition: border 0.3s ease-in-out;
-  padding: 10px;
+  padding: 10px 5px 30px;
 }
 
 .Clients__List__Item:last-child {
@@ -47,6 +48,26 @@
 .Clients__List__Item:hover > img {
   -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
   filter: grayscale(0);
+}
+
+.Clients__List__Item__Text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px 20px 2px;
+  background: #eee;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.Clients__List__Item:hover .Clients__List__Item__Text {
+  background: #ff9d8d;
+  color: #fff;
 }
 
 @media (min-width: 992px) {
