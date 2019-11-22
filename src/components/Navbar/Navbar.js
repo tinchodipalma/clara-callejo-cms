@@ -58,7 +58,7 @@ const Navbar = () => {
   }));
 
   menuItems.push({
-    slug: 'about-me',
+    slug: 'sobre-mi',
     name: 'Sobre Mi',
   });
 
