@@ -1,8 +1,10 @@
 ---
 contentType: activity-item
 enabled: true
-title: Branding
-description: 'Estrategia integral de marca - Concepto de marca - Identidad visual '
-image: /assets/cc-1-.png
+title: Diseño Gráfico
+description: >-
+  Papelería institucional - Brochures y folletería - Packaging - Cartelería y
+  señalética Editorial - Merchandising
+image: /assets/2-papeleria.jpg
 ---
 
