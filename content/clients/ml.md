@@ -1,6 +1,7 @@
 ---
 contentType: client-item
-enabled: true
+enabled: false
 label: MercadoLibre
 image: /assets/logos/logo1.png
 ---
+
