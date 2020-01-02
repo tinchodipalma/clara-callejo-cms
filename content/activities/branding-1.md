@@ -1,8 +1,10 @@
 ---
 contentType: activity-item
 enabled: true
-title: Branding
-description: 'Estrategia integral de marca - Concepto de marca - Identidad visual '
-image: /assets/cc-1-.png
+title: Community manager
+description: >-
+  Creación de perfiles en redes sociales - Manejo de redes sociales -
+  Elaboración de planes de comunicación 
+image: /assets/copia-de-cc-3-.png
 ---
 
