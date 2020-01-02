@@ -1,6 +1,7 @@
 ---
 contentType: client-item
-enabled: true
+enabled: false
 label: PlayStation
 image: /assets/logos/logo2.png
 ---
+
