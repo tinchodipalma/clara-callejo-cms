@@ -4,7 +4,7 @@ enabled: true
 aside: true
 menu: true
 menuTitle: 'Buscanos en las redes '
-menuOrder: '7'
+menuOrder: '1'
 path: Redes
 title: Buscanos en las redes
 description: 'Usa las redes para comunicarte con nosotros. '
