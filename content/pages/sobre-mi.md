@@ -1,9 +1,10 @@
 ---
 contentType: page
-enabled: true
+enabled: false
 aside: true
 menu: true
 menuTitle: 'Sobre mi '
+menuOrder: '2'
 path: sobremi
 title: Sobre Mi
 description: Clara Callejo
