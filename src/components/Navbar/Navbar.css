@@ -20,11 +20,24 @@
   overflow: hidden;
 }
 
+.Navbar__Logo a {
+  display: flex;
+  height: 100%;
+  text-decoration: none;
+}
+
+.Navbar__Logo .Navbar__Slogan {
+  display: none;
+  margin: 13px 0 auto;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
 .Navbar__Logo img {
   width: auto;
   height: 100%;
   object-fit: contain;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .Navbar__Menu__List {
@@ -117,6 +130,10 @@
 }
 
 @media (min-width: 992px) {
+  .Navbar__Logo .Navbar__Slogan {
+    display: block;
+  }
+
   .Navbar__Fade {
     display: none;
   }

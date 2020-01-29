@@ -29,6 +29,15 @@
   box-shadow: none;
 }
 
+.HomeLayout .Navbar__Slogan {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.HomeLayout:not(.HomeLayout--scroll) .Navbar__Slogan {
+  opacity: 0;
+}
+
 .HomeLayout--scroll .Navbar {
   border-bottom: 1px solid #e6c8b8;
 }
