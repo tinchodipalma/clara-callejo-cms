@@ -1,0 +1,118 @@
+.Portfolio__Content {
+  width: 100%;
+  padding: 10px 0;
+  columns: 1;
+  column-rule-style: dashed;
+  column-rule-color: #ff9d8d22;
+  column-gap: 20px;
+  column-width: calc(33.3% - 20px);
+}
+
+.Portfolio__Content > * {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.PortfolioItem__Container {
+  position: relative;
+  padding: 0 0 15px;
+  border: 2px solid #DDD;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.PortfolioItem__Container:hover,
+.PortfolioItem__Container:focus {
+  border-color: #ff9d8d;
+}
+
+.PortfolioItem__Data > div,
+.PortfolioItem__Container > div {
+  overflow: hidden;
+}
+
+.PortfolioItem__Images {
+  padding-top: 75%; /* 4:3 Aspect Ratio */
+  position: relative;
+  min-height: 250px;
+  max-height: 250px;
+}
+
+.PortfolioItem__Images button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+
+.PortfolioItem__Images button:last-child {
+  right: 0;
+}
+
+.PortfolioItem__Images::after {
+  content: '';
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: -200px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 2000px;
+  border-color: transparent transparent #fff transparent;
+  transition: border-width 0.3s ease-in-out;
+}
+
+.PortfolioItem__Container:hover .PortfolioItem__Images::after,
+.PortfolioItem__Container:focus .PortfolioItem__Images::after {
+  border-width: 0 0 0 2000px;
+}
+
+.PortfolioItem__Images img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  transition: opacity 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out, filter 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.PortfolioItem__Images img.PortfolioItem__Images__Image--active {
+  opacity: 1;
+}
+
+.PortfolioItem__Container:hover .PortfolioItem__Images img {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+.PortfolioItem__Name {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 5px 20px 2px;
+  max-width: calc(100% - 40px);
+  background: #ff9d8d;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.PortfolioItem__Need,
+.PortfolioItem__Context,
+.PortfolioItem__Strategy {
+  padding: 0 20px;
+  margin-top: 15px;
+}
+
+@media (min-width: 992px) {
+  .Portfolio__Content {
+    columns: 3;
+  }
+}

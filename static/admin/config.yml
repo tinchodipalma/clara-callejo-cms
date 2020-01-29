@@ -142,6 +142,35 @@ collections:
                   name: groupDataItem
                   label: Item
 
+      - name: portfolioConfig
+        file: content/settings/portfolio/portfolio.json
+        label: Portfolio
+        description: Portfolio
+        fields:
+          - name: portfolio
+            label: Portfolio
+            widget: list
+            fields:
+            - name: contentType
+              label: Content Type
+              widget: hidden
+              default: portfolio-item
+            - name: name
+              label: Nombre
+            - name: context
+              label: Contexto
+            - name: need
+              label: Necesidad
+            - name: strategy
+              label: Estrategia
+            - name: images
+              label: Imágenes
+              widget: list
+              field:
+                name: image
+                label: Imagen
+                widget: image
+
 
   - name: pages
     label: Páginas

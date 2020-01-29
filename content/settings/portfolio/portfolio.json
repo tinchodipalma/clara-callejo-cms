@@ -1,0 +1,13 @@
+{
+  "portfolio": [
+    {
+      "name": "Tincho",
+      "context": "Tincho es ingeniero en sistemas y dicta cursos de programación.",
+      "need": "Crear la marca, logo y perfiles de redes sociales con el fin de promocionar los diferentes cursos.",
+      "strategy": "En un primer momento se utilizaron las redes sociales ya existentes para publicitar los cursos inmediatos: redes sociales personales y las del espacio Le Cordam que fue el lugar donde se realizaron las actividades.",
+      "images": [
+        "/assets/20191106_111853_0000.png"
+      ]
+    }
+  ]
+}

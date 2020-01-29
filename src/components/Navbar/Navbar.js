@@ -8,6 +8,7 @@ import Logo from '../Logo';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import './Navbar.css';
+import { PAGES_MENU_ITEMS } from './Navbar.constants';
 
 const MenuList = ({ items = [] }) => (
   <ul className="Navbar__Menu__List">
@@ -55,12 +56,7 @@ const Navbar = () => {
   const menuItems = allMarkdownRemark.edges.map(({ node }) => ({
     slug: (node.frontmatter.path || node.fields.slug).toLowerCase(),
     name: node.frontmatter.menuTitle || node.frontmatter.title,
-  }));
-
-  menuItems.push({
-    slug: 'sobre-mi',
-    name: 'Sobre Mi',
-  });
+  })).concat(PAGES_MENU_ITEMS);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const onMenuToggle = () => {
