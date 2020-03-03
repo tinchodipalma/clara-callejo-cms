@@ -1,0 +1,5 @@
+---
+aboutUsEnabled: true
+aboutUsText: Algo
+---
+
