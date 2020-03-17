@@ -11,6 +11,97 @@
   height: 100%;
 }
 
+.BlogPage__Container {
+  display: grid;
+  grid: auto / auto;
+  width: 100%;
+  margin: 40px 0;
+  padding-bottom: 30px;
+}
+
+.BlogPage__Aside {
+  position: relative;
+  border-top: 3px dotted #cbafa0;
+  padding: 10px 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.BlogPage__Content {
+  display: grid;
+  grid: auto / auto;
+}
+
+.BlogPage__Content__Item {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  margin-bottom: 50px;
+  color: #7f4a40;
+  border: 2px solid #eee;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.BlogPage__Content__Item .BlogPage__Content__Item__Title {
+  padding: 10px;
+  color: #7f4a40;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.BlogPage__Content__Item__Metadata {
+  display: grid;
+  grid: auto / auto auto;
+  padding: 5px 10px;
+}
+
+.BlogPage__Content__Item__Metadata > :last-child {
+  text-align: right;
+}
+
+.BlogPage__Content__Item__Image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.BlogPage__Content__Item__Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(70%);
+  transition: transform 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out,
+    filter 0.3s ease-in-out;
+}
+
+.BlogPage__Content__Item__Description {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.BlogPage__Content__Item:hover,
+.BlogPage__Content__Item:focus {
+  border: 2px solid #ff9d8dee;
+}
+
+.BlogPage__Content__Item:hover .BlogPage__Content__Item__Title,
+.BlogPage__Content__Item:focus .BlogPage__Content__Item__Title {
+  color: #ff9d8d;
+}
+
+.BlogPage__Content__Item:hover .BlogPage__Content__Item__Description,
+.BlogPage__Content__Item:focus .BlogPage__Content__Item__Description {
+  border-bottom: 1px solid #ff9d8dee;
+}
+
+.BlogPage__Content__Item:hover .BlogPage__Content__Item__Image img,
+.BlogPage__Content__Item:focus .BlogPage__Content__Item__Image img {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
 @media (min-width: 576px) {
   .Layout__Main {
     margin: 0 5%;
@@ -20,6 +111,22 @@
 @media (min-width: 992px) {
   .Layout__Main {
     margin: 0 7%;
+  }
+
+  .BlogPage__WithAside {
+    grid: auto / calc(100% - 400px) 400px;
+  }
+
+  .BlogPage__Aside {
+    border-top: 0;
+    padding: 0;
+    margin: 0 0 0 20px;
+    width: calc(100% - 20px);
+  }
+
+  .BlogPage__Content {
+    grid: auto / repeat(2, 1fr);
+    grid-gap: 20px;
   }
 }
 
