@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { graphql } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
 import Landing from '../layouts/Landing';
 import SEO from '../components/seo';
@@ -38,9 +39,15 @@ const IndexPage = ({ data }) => {
 
   return (
     <Landing className={className}>
-      <SEO title="Inicio" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="Inicio"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      />
 
-      <div className="HomeSection HomeSectionStartLayer" style={homeSectionStyles}>
+      <div
+        className="HomeSection HomeSectionStartLayer"
+        style={homeSectionStyles}
+      >
         <div></div>
         <div className="HomeSection__Main">
           <Logo />
@@ -53,17 +60,17 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
-      {!!landingConfig.activitiesList &&
+      {!!landingConfig.activitiesList && (
         <div className="HomeSection HomeSectionActivitiesLayer">
           <Activities />
         </div>
-      }
+      )}
 
-      {!!landingConfig.clientsList &&
+      {!!landingConfig.clientsList && (
         <div className="HomeSection HomeSectionClientsLayer">
           <Clients />
         </div>
-      }
+      )}
 
       <div className="HomeSection HomeSectionContactLayer">
         <Contact />
@@ -85,6 +92,6 @@ export const pageQuery = graphql`
         coverTitle
         coverSubtitle
       }
-    }  
+    }
   }
 `;

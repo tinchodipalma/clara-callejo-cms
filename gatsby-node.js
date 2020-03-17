@@ -5,11 +5,22 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogPostComponent = path.resolve(`./src/templates/blog-post.js`);
-  const customPageComponent = path.resolve(`./src/templates/CustomPage/index.js`);
+  const customPageComponent = path.resolve(
+    `./src/templates/CustomPage/index.js`
+  );
   return graphql(
     `
       {
-        allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 1000, filter: {frontmatter: {enabled: {eq: true}}}) {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+          filter: {
+            frontmatter: {
+              enabled: { eq: true }
+              contentType: { in: ["page", "blog-post"] }
+            }
+          }
+        ) {
           edges {
             node {
               fields {
@@ -33,19 +44,18 @@ exports.createPages = ({ graphql, actions }) => {
     const edges = result.data.allMarkdownRemark.edges;
 
     edges.forEach((edge, index) => {
-      let edgePath = edge.node.frontmatter.path || edge.node.fields.slug;
+      let path = edge.node.fields.slug;
       let component = customPageComponent;
 
-      if (edge.node.frontmatter.contentType !== 'page') {
-        edgePath = `blog${edgePath}`;
+      if (edge.node.frontmatter.contentType === 'blog-post') {
         component = blogPostComponent;
       }
-
+      console.log(path);
       createPage({
-        path: edgePath.toLowerCase(),
+        path,
         component,
         context: {
-          slug: edge.node.fields.slug,
+          slug: edge.node.fields.slug || path,
         },
       });
     });
@@ -58,11 +68,28 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
+    let pathValue = createFilePath({ node, getNode });
+
+    if (node.frontmatter.path) {
+      pathValue = node.frontmatter.path;
+      pathValue = pathValue.startsWith('/') ? pathValue : `/${pathValue}`;
+      pathValue = pathValue.toLowerCase();
+
+      if (node.frontmatter.contentType === 'blog-post') {
+        pathValue = `/blog${pathValue}`;
+      }
+    }
+
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: pathValue,
+    });
+
+    createNodeField({
+      name: `contentType`,
+      node,
+      value: node.frontmatter.contentType || 'NotDefined',
     });
   }
 };

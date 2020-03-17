@@ -7,4 +7,8 @@ export const PAGES_MENU_ITEMS = [
     slug: 'sobre-mi',
     name: 'Sobre Mi',
   },
+  {
+    slug: 'blog',
+    name: 'Blog',
+  },
 ];

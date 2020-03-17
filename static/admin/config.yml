@@ -71,7 +71,6 @@ collections:
                 label: Tumblr
                 required: false
 
-
       - name: landingConfig
         file: content/settings/landing/landingConfig.json
         label: Página de inicio
@@ -91,12 +90,7 @@ collections:
               widget: string,
               required: true,
             }
-          - {
-              name: aboutMe,
-              label: Sobre Mi,
-              widget: boolean,
-              default: true,
-            }
+          - { name: aboutMe, label: Sobre Mi, widget: boolean, default: true }
           - {
               name: activitiesList,
               label: Listado de Actividades,
@@ -151,26 +145,25 @@ collections:
             label: Portfolio
             widget: list
             fields:
-            - name: contentType
-              label: Content Type
-              widget: hidden
-              default: portfolio-item
-            - name: name
-              label: Nombre
-            - name: context
-              label: Contexto
-            - name: need
-              label: Necesidad
-            - name: strategy
-              label: Estrategia
-            - name: images
-              label: Imágenes
-              widget: list
-              field:
-                name: image
-                label: Imagen
-                widget: image
-
+              - name: contentType
+                label: Content Type
+                widget: hidden
+                default: portfolio-item
+              - name: name
+                label: Nombre
+              - name: context
+                label: Contexto
+              - name: need
+                label: Necesidad
+              - name: strategy
+                label: Estrategia
+              - name: images
+                label: Imágenes
+                widget: list
+                field:
+                  name: image
+                  label: Imagen
+                  widget: image
 
   - name: pages
     label: Páginas
@@ -189,7 +182,11 @@ collections:
       - { name: aside, label: Barra Lateral, widget: boolean, default: true }
       - { name: menu, label: Menú, widget: boolean, default: false }
       - { name: menuTitle, label: Título de Menú }
-      - { name: menuOrder, label: Orden del Menú (numérico y ascendente), default: '0' }
+      - {
+          name: menuOrder,
+          label: Orden del Menú (numérico y ascendente),
+          default: '0',
+        }
       - { name: path, label: Path }
       - { name: title, label: Título }
       - { name: description, label: Descripción }
@@ -208,6 +205,7 @@ collections:
           widget: hidden,
           default: blog-post,
         }
+      - { name: enabled, label: Habilitado, widget: boolean, default: true }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
