@@ -15,7 +15,7 @@ const MenuList = ({ items = [] }) => (
   <ul className="Navbar__Menu__List">
     {items.map(({ slug, name }, i) => (
       <li key={i} className="Navbar__Menu__List__Item">
-        <Link to={slug}>{name}</Link>
+        <Link to={slug.startsWith('/') ? slug : `/${slug}`}>{name}</Link>
       </li>
     ))}
   </ul>

@@ -8,7 +8,7 @@ class Blog extends React.Component {
     const { data } = this.props;
     const siteTitle = data.allSiteJson.nodes[0].siteTitle;
     const posts = data.allMarkdownRemark.edges;
-    console.log(posts);
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Blog" />

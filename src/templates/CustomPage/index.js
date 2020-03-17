@@ -11,8 +11,6 @@ const CustomPageTemplate = (props) => {
   const post = props.data.markdownRemark;
   const siteTitle = props.data.allSiteJson.nodes[0].siteTitle;
 
-  console.log(props.pageContext, props);
-
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO
@@ -20,19 +18,28 @@ const CustomPageTemplate = (props) => {
         description={post.frontmatter.description || post.excerpt}
       />
 
-      <div className={`CustomPageTemplate CustomPageTemplate__Container ${post.frontmatter.aside ? 'CustomPageTemplate__WithAside' : 'CustomPageTemplate__WithoutAside'}`}>
+      <div
+        className={`CustomPageTemplate CustomPageTemplate__Container ${
+          post.frontmatter.aside
+            ? 'CustomPageTemplate__WithAside'
+            : 'CustomPageTemplate__WithoutAside'
+        }`}
+      >
         <div className="CustomPageTemplate__Title MainSection__Title">
           <Typography variant="h4" color="secondary">
             {post.frontmatter.title}
           </Typography>
         </div>
         <div className="CustomPageTemplate__MainContainer">
-          <div className="CustomPageTemplate__Main" dangerouslySetInnerHTML={{ __html: post.html }} />
-          {!!post.frontmatter.aside &&
+          <div
+            className="CustomPageTemplate__Main"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+          {!!post.frontmatter.aside && (
             <aside className="CustomPageTemplate__Aside">
               <Aside />
             </aside>
-          }
+          )}
         </div>
       </div>
     </Layout>
