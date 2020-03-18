@@ -29,11 +29,10 @@ module.exports = {
         // Avoids sending pageview hits from custom paths
         exclude: [`/assets/**`],
         // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 1,
+        pageTransitionDelay: 0,
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: `claracallejo.com.ar`,
       },
     },
     {
