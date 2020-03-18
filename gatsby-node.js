@@ -50,7 +50,7 @@ exports.createPages = ({ graphql, actions }) => {
       if (edge.node.frontmatter.contentType === 'blog-post') {
         component = blogPostComponent;
       }
-      console.log(path);
+
       createPage({
         path,
         component,
@@ -89,7 +89,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `contentType`,
       node,
-      value: node.frontmatter.contentType || 'NotDefined',
+      value: node.frontmatter.contentType || 'not-defined',
     });
   }
 };
