@@ -3,7 +3,7 @@ contentType: blog-post
 enabled: true
 path: 'Encontrar la oportunidad '
 date: 2020-03-18T15:56:55.504Z
-title: 'Que el caos no nos detenga '
+title: 'Que-el-caos-no-nos-detenga '
 image: /assets/untitled-design.jpg
 description: >-
   ¿Qué hicieron las marcas ante el problema de salud que azota al mundo?¿Qué
