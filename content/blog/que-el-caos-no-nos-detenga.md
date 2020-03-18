@@ -7,9 +7,9 @@ title: Que el caos no nos detenga
 image: /assets/untitled-design.jpg
 description: >-
   ¿Qué hicieron las marcas ante el problema de salud que azota al mundo?¿Qué
-  tiene que ver el marketing en este moento?
+  papel juega el marketing en este momento?
 ---
-En un contexto de caos no solo a nivel país, sino también mundial, las ventas se ven claramente afectadas por la necesidad de cerrar los negocios físicos y la poca circulaciòn de personas en las calles. 
+En un contexto de caos no solo a nivel país, sino también mundial las ventas se ven claramente afectadas por la necesidad de cerrar los negocios físicos y la poca circulación de personas en las calles. 
 
 Pero ¿por qué no podría ser esto tomado como una oportunidad? El mundo digital nos da infinitas posibilidades de innovar, generar contenido novedoso y además de poner a prueba la creatividad de los equipos de marketing. 
 
