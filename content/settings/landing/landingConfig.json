@@ -3,6 +3,6 @@
   "coverTitle": "Clara Callejo",
   "coverSubtitle": "Asesoría en Comunicación",
   "activitiesList": true,
-  "clientsList": true,
+  "clientsList": false,
   "aboutMe": true
 }
