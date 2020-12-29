@@ -18,6 +18,16 @@
       "images": [
         "/assets/logoinsupan.jpg"
       ]
+    },
+    {
+      "contentType": "portfolio-item",
+      "name": "paraConcesionarias ",
+      "context": "paraConcesionarias es una marca compuesta por un grupo de amigos que juntos desarrollaron un sistema innovador pensado para las concesionarias de autos usados. ",
+      "need": "Crear el branding para poder desarrollar los perfiles en redes sociales, ya que es el principal canal de comunicación con los clientes potenciales. ",
+      "strategy": "Se creó el logo como puntapié inicial de la identidad de marca, en conjunto con el cliente se conformó la visión, misión y objetivos de paraConcesionarias. Se crearon los perfiles de redes sociales con una imagen que tiene en cuenta el perfil de los clientes potenciales. ",
+      "images": [
+        "assets/logoparaconcesionariasfinal.png.png"
+      ]
     }
   ]
 }
