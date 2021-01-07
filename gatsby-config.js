@@ -137,7 +137,7 @@ module.exports = {
         theme_color: `#ffe1d1`,
         display: `minimal-ui`,
         // edit below
-        icon: `static/assets/logos/CC.svg`,
+        icon: `static/assets/logos/CC.png`,
       },
     },
     {
